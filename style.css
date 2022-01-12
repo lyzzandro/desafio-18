@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(imagens/spider-man-miles-morales-4k-2020-ix-1920x1080\ 1.jpg)  no-repeat ;
+    background-size: cover;
+}
+
+header{
+    z-index:1;
+    position: fixed;
+    background: rgba(29, 29, 29, 0.5);
+    margin: 0 0 0 6%;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    cursor: pointer;
+    height: 60%;
+    margin:  0 20vw 0 0 ;
+}
+
+header img:hover{
+    filter: drop-shadow( 0px 0px 5px rgb(100, 100, 100));
+}
+
+#logo{
+    cursor: pointer;
+    width: 10%;
+    margin:  0 30vw 0 8vw ;
+}
+
+header a{
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    cursor: default;
+    color: white;
+}
+
+#links a{
+    cursor: pointer;
+}
+
+
+
+#links{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: 0 5% 0 0;
+    
+}
+
+#links a:hover{
+    filter: invert(28%) sepia(1%) saturate(410%) hue-rotate(314deg) brightness(88%) contrast(91%);
+}
+
+#lateral{
+    position: fixed;
+    background: rgba(29, 29, 29, 0.5);
+    height: 100vh;
+    width: 6%;
+}
+
+#lateral img{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    padding: 2.2vh 0 0 0;
+    cursor: pointer;
+}
+
+#lateral img:hover{
+    filter: drop-shadow( 0px 0px 5px rgb(100, 100, 100));
+}
+
+#icons{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#icons img{
+    width: 30%;
+    cursor: pointer;
+}
+
+#icons img:hover{
+    
+    filter: invert(28%) sepia(1%) saturate(410%) hue-rotate(314deg) brightness(88%) contrast(91%) drop-shadow( 0px 0px 5px rgb(100, 100, 100));
+}
+
+#pesquisa{
+    display: flex;
+    width: 100%;
+    margin: 30vh 0 0 0 ;
+}
+
+#pesquisa img{
+    padding: 0 0 0 0;
+    width: 30%;
+}
+
+#pesquisa img:hover{
+    filter: invert(28%) sepia(1%) saturate(410%) hue-rotate(314deg) brightness(88%) contrast(91%);
+}
+
+#centro{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(11, 12, 16, 0.6) 0%, rgba(11, 12, 16, 0.4) 52.08%, rgba(12, 12, 16, 0.6) 100%);
+}
+
+#centro a{
+    text-decoration: none;
+ }
+
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    width: 15vw;
+    height: 6vh;
+    border: 2px solid #EC111A;
+    border-radius:  1.5em 0 0 0;
+    background: #1D1D1D;
+    color: #F9F9F9;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #272626;
+}
+
+button img{
+    width: 8%;
+    margin: 0 0 0 1.5vw;
+}
