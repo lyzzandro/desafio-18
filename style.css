@@ -6,38 +6,80 @@
 }
 
 body{
-    background: url(imagens/spider-man-miles-morales-4k-2020-ix-1920x1080\ 1.jpg)  no-repeat ;
+    height: 100vh;
+    background: url(imagens/spider-man-miles-morales-4k-2020-ix-1920x1080\ 1.jpg)  no-repeat right;
     background-size: cover;
 }
 
-header{
+nav{
     z-index:1;
     position: fixed;
+    right: 0;
     background: rgba(29, 29, 29, 0.5);
-    margin: 0 0 0 6%;
     height: 10vh;
-    width: 100%;
+    width: 94%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-header img{
-    cursor: pointer;
-    height: 60%;
-    margin:  0 20vw 0 0 ;
+nav button{
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 36px;
+    position: absolute;
+    right: 30px;
+    display: none;
+    padding: 0px 10px 3px 10px;
 }
 
-header img:hover{
+nav button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav button:focus ~ ul {
+    top: 0;
+}
+
+#aranha{
+    display: inline-flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 42%;
+    height: 6%;
+}
+
+nav img{
+    cursor: pointer;
+}
+
+nav img:hover{
     filter: drop-shadow( 0px 0px 5px rgb(100, 100, 100));
 }
 
 #logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    margin: auto 0 auto 40px ;
     cursor: pointer;
-    width: 10%;
-    margin:  0 30vw 0 8vw ;
 }
 
-header a{
+.logo a:hover{
+    filter: none;
+}
+
+nav a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     font-family: 'Sora', sans-serif;
     font-weight: 300;
     text-decoration: none;
@@ -45,21 +87,16 @@ header a{
     color: white;
 }
 
-#links a{
+ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+li a{
     cursor: pointer;
 }
 
-
-
-#links{
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
-    margin: 0 5% 0 0;
-    
-}
-
-#links a:hover{
+a:hover{
     filter: invert(28%) sepia(1%) saturate(410%) hue-rotate(314deg) brightness(88%) contrast(91%);
 }
 
@@ -130,7 +167,7 @@ header a{
     text-decoration: none;
  }
 
-button{
+#centro button{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -147,11 +184,99 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    background: #272626;
+#centro button:hover{
+    background: #2e2e2e;
 }
 
-button img{
+#centro a:hover{
+    filter: none;
+}
+
+#centro button img{
     width: 8%;
     margin: 0 0 0 1.5vw;
+}
+
+button:focus~ul{
+    height: 100%;
+}
+
+button:focus~ul a{
+    display: flex;
+}
+
+@media (max-width:1000px){
+
+    nav{
+        width: 100%;
+    }
+
+    nav button{
+        display: flex;
+    }
+
+    #aranha{
+        margin: 0 0 0 48%;
+    }
+
+    ul li{
+        cursor: default;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        background: #1D1D1D;
+        top: 0%;
+        height: 0%;
+        margin: 10vh 0 0 0;
+        text-align: center;
+        transition: all .5s;
+        cursor: default;
+        text-align: center;
+    }
+
+    li{
+        padding: 20px 0 20px 0 ;
+        font-size: 2em;
+        cursor: default;
+    }
+
+    li a{
+        padding: 10px;
+        cursor:pointer;
+        display: none;
+    }
+
+    ul a:hover{
+        transition: 0.5s;
+        background: black;
+        filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(187deg) brightness(103%) contrast(101%);
+    }
+
+    #lateral{
+        display: none;
+    }
+
+    #centro img{
+        width: 400px;
+    }
+
+    #centro button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Sora', sans-serif;
+        font-weight: 500;
+        font-size: 0.6em;
+        width: 200px;
+        height: 40px;
+        border-radius:  1.5em 0 0 0;
+        background: #1D1D1D;
+        color: #F9F9F9;
+        cursor: pointer;
+    }
 }
